@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'main.css')}} "
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a class="nav-heading" href="{{ url_for('home_page') }}"
+          ><span>Mango</span></a
+        >
+        <img
+          id="mobile-cta"
+          class="mobile-menu"
+          src="{{url_for('static', filename='images/menu.svg')}}"
+          alt="Open navigation"
+        />
+        <nav class="nav-menu">
+          <img
+            id="mobile-exit"
+            class="mobile-exit"
+            src="{{ url_for('static', filename='images/exit.svg')}}"
+            alt="Exit navigation"
+          />
+          <ul class="primary-nav">
+            <li><a href="{{ url_for('home_page') }}">Home</a></li>
+            <li><a href="{{ url_for('about_page') }}">Pengujian</a></li>
+            <li><a href="{{ url_for('categories_page') }}">Categories</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero" style="height: 100px">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <!-- <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          
+        </div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="{{url_for('static', filename='images/mangga.jpg')}}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-flex justify-content-center align-content-lg-center d-md-block   input-car" style="padding-top: 8px; top: 1%;">
+              <h5 class="Judul"><p class="subheading" >Mango Classification</p></h5>
+              <p>
+                <section class="hero-input border">
+                <div class="main-div">
+                  <div class="input-div">
+                    <form id="upload-image" method="post" enctype="multipart/form-data">
+                      <h2 class="fw-bold">Upload Image</h2>
+                       <div class="image mb-4">
+                          <img src="{{url_for('static', filename='images/no-image.png')}}" style="width: 20rem" id="gambar">
+                        </div>
+                      <label for="ImageUpload" class="image-unpload mt-4"> </label>
+                      <input
+                        class="input-btn p-2"
+                        type="file"
+                        name="file"
+                        id="file"
+                        accept=".png, .jpg, .jpeg"
+                        onchange="PreviewImage();"
+                      />
+                       <button id="pilih" class="btn-primary d-none"></button>
+                      <input type="submit" class="predict-btn" value="Predict" />
+                    </form>
+                  </div>
+                </div>
+              </section>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          
+        </button> -->
+      </div>
+      </section>
+
+    <!-- event lister means allowing click on that  -->
+    <script>
+      const mobileBtn = document.getElementById("mobile-cta");
+      nav = document.querySelector("nav");
+      mobileBtnExit = document.getElementById("mobile-exit");
+
+      mobileBtn.addEventListener("click", () => {
+        nav.classList.add("menu-btn");
+      });
+
+      mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+    </script>
+
+    <script type="text/javascript">
+    var tm_pilih = document.getElementById('pilih');
+        var file = document.getElementById('file');
+        tm_pilih.addEventListener('click', function () {
+            file.click();
+        })
+        file.addEventListener('change', function () {
+            gambar(this);
+        })
+        function gambar(a) {
+            if (a.files && a.files[0]) {     
+                 var reader = new FileReader();    
+                 reader.onload = function (e) {
+                     document.getElementById('gambar').src=e.target.result;
+                 }    
+                 reader.readAsDataURL(a.files[0]);
+            }
+        }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

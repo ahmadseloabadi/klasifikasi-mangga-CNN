@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url("https://fonts.googleapis.com/css?family=Metal Mania");
+
+@font-face{
+    font-family:'Booter - Zero Zero';
+    src: url("font/Booter - Zero Zero.woff") format("woff"),
+         url("font/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #007AF3; 
+ 
+ }
+
+
+body{
+    background: #F2F2F2;
+    margin: 0;
+    font-family: poppins;
+}
+
+.navbar{
+    background: white;
+    padding: 1em;
+    
+    
+    .nav-heading{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 1.8em;
+        font-family: oswald;
+        padding-top: .2em;
+
+        span{
+            color: var(--primary-color);
+        }
+    }
+    
+    nav{
+        display: none;       
+       }
+
+    .container{
+        display: flex;
+        // using this placce-c menu logo will go to right end
+        place-content: space-between;
+    }   
+   
+}
+
+section.hero{
+    text-align: center;
+     
+    div.container{
+        background-image: url("{{url_for('static', filename='images/cassava-leaf2.jpg')}}");
+        padding-top:1em ;
+        padding-bottom: .5em;
+
+    }
+    .subheading{
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        font-weight: bold;
+        color: white;
+    }
+
+    .main-heading{
+        font-size: 6.5em;
+        font-family:'Booter - Zero Zero';
+        margin-top: .2em;
+        color:#1d0200;
+        padding-bottom: .1em;
+       
+    }
+}
+
+section.hero-input{
+    text-align: center;
+    background-color: #F1F1F1;
+    
+    div.main-div{
+          padding:0 ;
+        
+          
+        h2{
+            font-size: 3em;
+            font-family: Metal Mania;
+        }
+          input{
+              padding: .8em;
+              width: 50%;
+              margin-bottom: 2em;
+              border: 1px solid;
+              border-radius: 1em;
+              box-sizing: border-box;
+          }
+     
+          .input-btn{
+              color: var(--primary-color);
+          }
+
+          .predict-btn{
+              background-color: var(--primary-color);
+              font-size: 1.3em;
+              font-weight: bold;
+              border: none;
+              border-radius: 5em;
+              width: 50%;
+          }
+
+    }
+}
+
+footer{
+    text-align: left;
+    padding:1em;
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        
+        li{
+            padding-left: 1em;
+        }
+    }
+
+    .footer-about{
+        color: var(--primary-color);
+        border: 3px solid var(--primary-color);
+        font-weight: bold;
+        border-radius: 5em;
+        margin: -.2em;
+        padding:.1em;
+        p{
+            font-size: 1em;
+            font-style: unset;
+            font-family: raleway;
+        }
+        &:hover{
+            background: var(--primary-color);
+            color: white;
+        }
+    }
+}
+
+//  this below park is for mobile version menu bar 
+// which will come out whenc clicked
+
+nav{
+    position: fixed;
+    // it will come on top of every thing 
+    z-index: 999;
+    width: 66%;
+    right: 0;
+    background: #20273E ;
+    // it will come out on page
+    height: 100vh;
+    padding: 1em;
+    
+    ul.primary-nav{
+        margin-top:5em;
+        list-style-type: none;
+    }
+
+    li{
+        
+        a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: .5em;
+            font-size: 1.3em;
+            text-align: left;
+
+            &:hover{
+                font-weight: bolder;
+            }
+        }
+    }
+
+}
+
+.mobile-exit{
+ float: left;
+ margin:1em;
+ cursor: pointer;
+}
+
+// define button
+nav.menu-btn{
+    display: block;
+}
+
+
+// responsive disign
+// media qury is like if statement 
+@media only screen and (min-width:700px){
+
+    .mobile-menu, .mobile-exit{
+        display: none;
+    } 
+    
+    .navbar{
+        padding-bottom:0 ;
+    }
+
+    //  we cant see anything use bellow
+    .navbar nav{
+        display: flex;
+        background:none ;
+        height: auto;
+        position: unset;
+        width:100%;
+        padding: 0;
+        
+
+
+        ul{
+            display: flex;
+        }
+
+        a{
+            color: black;
+            font-size: 1.5em;
+            // two vals for padd means top-bottom and right-left
+            padding: .5em 1em;        
+        }
+
+        ul.primary-nav{
+           margin: 0;
+        }
+        
+        li.current a:active{
+            font-weight: bolder;
+            
+        }
+
+    
+    }
+
+}
+
+//  Categories html file ------------------------------
+
+
+h2.cat-heading{
+    text-align: center;
+    padding: 0;
+    font-size: 3em;
+    background: #F1F1F1;
+    font-family: Metal Mania;
+}
+
+section.categories-content{
+background:var(--primary-color);
+color: white;
+     
+       
+    .cat-list{
+        padding: 2em 1em;
+          
+        }
+     
+     ul{
+         list-style-type: none;
+
+            li{
+                    background: blue;
+                    text-align: center;
+                    padding: 2em 1em;
+                    width: 80%;
+                    margin: 0 auto 5em auto;
+                    border-radius: 2em;
+
+                    img{
+                        width: 12em;
+                        height: 12em;
+                        border: 5px solid #266aad;
+                        border-radius: 50%;
+                        margin-top: -5em;
+                    }
+
+                }
+            a{
+                color: white;
+                border:3px solid;
+                border-color: white;
+                border-radius: .7em;
+
+                &:hover{
+                    font-weight: bold;
+                    color:rgb(51, 51, 177);
+                    background: white;
+
+                }
+            }    
+
+
+        }  
+   
+}
+//  categories end------------------------------
+
+// About page------------------------------------------------
+
+section.about{
+    h2{
+        font-size: 3em;
+        font-family: Metal Mania;
+        padding-left: 7em;
+        background-color:#F2F2F2;
+    }
+    
+
+    .about-div{
+        background:  #20272E;
+        padding: 1.2em;
+        padding-left: 7em;
+        
+        a{
+            color: var(--primary-color);
+            border:2px solid ;
+            border-color: white;
+            border-radius: .7em;
+            text-decoration: none;
+
+            &:hover{
+                font-weight: bold;
+                color:black;
+                background: white;
+
+            }
+        } 
+
+        div{
+
+            ul.features-list{
+                margin: 0;
+                color: white;
+                padding-left: .1em;
+                list-style-type: circle;
+                list-style-position: outside;
+                list-style-image: none;
+               
+
+                li{
+                    font-size: 1.1em;
+                    margin-bottom: 1em;
+                    margin-left: 2em;
+
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width:20px;
+                        height:20px;
+
+                    } 
+                }
+
+            }
+    
+        }
+
+    }
+
+
+
+    div.tools-div{
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    div.sub-div{
+        background: #20272E ;
+        color: white;
+        columns: 2;
+        padding: 1em;
+        
+
+
+        ul.tools-list{
+            margin: 0;
+            font-size: 1.1em;
+            margin-left: 3em;
+           
+
+
+            li{
+                margin-bottom:1em ;
+                margin-bottom: 1em;
+                position: relative;
+
+                &:before{
+                    content: '';
+                    left: -2em;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("{{url_for('static', filename='images/bullet.sva')}}");
+                    background-size: contain;
+                    margin-right: .5em;
+                }
+            }
+        }
+        
+    }
+
+    footer{
+
+        a{
+            border: 5px solid;
+            border-radius: 1em;
+            text-decoration: none;
+            color: var(--primary-color);
+
+            &:hover{
+                color: white;
+                background:var(--primary-color) ;
+            }
+        }
+    }
+
+}
+
+
+div.prediction{
+    text-align: center;
+    background-color: #F2F2F2;
+    
+    h1{
+        font-size: 5em;
+        font-family:'Booter - Zero Zero' ;
+    }
+
+    .predicted-class{
+        h2{
+            font-size: 2em;
+            font-family: Metal Mania;
+        }
+        
+        
+    }
+    
+    .retry{
+        font-size:2em;
+    font-family: Metal Mania;
+    padding:1em;
+    text-align: center;
+    a{
+        text-decoration: none;
+        background: var(--primary-color);
+        padding: .2em;
+        border-radius: 3em;
+        color: black;
+
+        &:hover{
+            color: white;
+            
+        }
+    }
+
+    }
+}
+
+div.false-predicted-class{
+
+    h2{
+        font-size: 2em;
+        font-family: Metal Mania;
+        color: #641E16;
+    }
+    
+}
+
+//  about heading for mobile
+@media only screen and (max-width:800px){
+
+    section.about{
+
+        h2{
+           padding-left: 1em;
+        }
+
+    }
+}
+
+@media only screen and (max-width:700px){
+
+    section.about{
+
+        .about-div{
+            padding-left: 2em ;
+        }
+    }
+}

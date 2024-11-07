@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Metal Mania");
+@font-face {
+  font-family: "Booter - Zero Zero";
+  src: url("font/Booter - Zero Zero.woff") format("woff"),
+    url("font/Booter - Zero Zero.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #007af3;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: poppins;
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+}
+
+.navbar .nav-heading {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.8em;
+  font-family: oswald;
+  padding-bottom: 0.2em;
+}
+
+.navbar .nav-heading span {
+  color: var(--primary-color);
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  flex-wrap: nowrap;
+  display: flex;
+  place-content: space-between;
+}
+
+section.hero {
+  text-align: center;
+}
+
+section.hero div.container {
+  background-image: url("{{url_for('static', filename='images/cassava-leaf2.jpg')}}");
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+section.hero .subheading {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  color: white;
+}
+
+section.hero .main-heading {
+  font-size: 6.5em;
+  font-family: "Booter - Zero Zero";
+  margin-top: 0.2em;
+  color: #1d0200;
+  padding-bottom: 0.1em;
+}
+
+section.hero-input {
+  text-align: center;
+  background-color: transparent;
+  opacity: 85%;
+  border-radius: 10px;
+  margin-bottom: 45rem;
+  border: none;
+  height: 500px;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  backdrop-filter: blur(55px);
+  box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+}
+
+section.hero-input div.main-div {
+  padding: 0;
+}
+
+section.hero-input div.main-div h2 {
+  font-size: 34px;
+  margin-bottom: 28px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+
+section.hero-input div.main-div input {
+  padding: 0.2em;
+  width: 50%;
+  font-size: 0.6em;
+  margin-bottom: 2em;
+  border: 1px solid;
+  border-radius: 1em;
+  box-sizing: border-box;
+  opacity: 100%;
+}
+
+section.hero-input div.main-div .input-btn {
+  color: white;
+}
+
+section.hero-input div.main-div .predict-btn {
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5em;
+  width: 50%;
+  opacity: 100%;
+}
+
+footer {
+  text-align: left;
+  padding: 1em;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+footer ul li {
+  padding-left: 1em;
+}
+
+footer .footer-about {
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  font-weight: bold;
+  border-radius: 5em;
+  margin: -0.2em;
+  padding: 0.1em;
+}
+
+footer .footer-about p {
+  font-size: 1em;
+  font-style: unset;
+  font-family: raleway;
+}
+
+footer .footer-about:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  display: grid;
+  background: #20273e;
+  height: 100vh;
+  padding: 4px;
+}
+
+nav ul.primary-nav {
+  list-style-type: none;
+  margin-right: 200px;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  font-weight: bold;
+  color: #006bd6;
+}
+
+.mobile-exit {
+  float: left;
+  margin: 1em;
+  cursor: pointer;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+.features .primary-copy {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis " [..]";
+}
+.features .primary-copy- {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 11; /* number of lines to show */
+  line-clamp: 11;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis " [..]";
+}
+
+.carousel-caption {
+  padding-bottom: 15rem;
+  right: 20%;
+  bottom: 1rem;
+  left: 20%;
+  padding-top: 4rem;
+  padding-bottom: 15rem;
+  color: #fff;
+}
+
+.features .features-wrapper .big-card {
+  height: 49%;
+}
+.features .features-wrapper .big-feature-card {
+  padding: 30px;
+  display: flex;
+  border-radius: 16px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+.features .features-wrapper .small-feature-card {
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+/* jika fratures-wrapper di hover(disorot) maka big-features-cardnya akan menjalankan filter yaitu blur */
+.features-wrapper:hover .big-feature-card:not(:hover) {
+  filter: blur(4px);
+}
+
+.features-wrapper:hover .small-feature-card:not(:hover) {
+  filter: blur(4px);
+}
+
+.features .features-wrapper h3 {
+  padding-top: 16px;
+}
+
+.features .features-wrapper .icon {
+  margin-right: 18px;
+}
+
+/* .features .features-wrapper .small-feature-card .icon {
+  display: flex;
+  direction: row;
+} */
+
+.features .features-wrapper .icon img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.text-button {
+  text-decoration: none;
+  color: black;
+}
+
+.text-button:hover {
+  text-decoration: underline;
+  color: rgb(25, 0, 255);
+}
+
+@media only screen and (min-width: 700px) {
+  .mobile-menu,
+  .mobile-exit {
+    display: none;
+  }
+  .navbar {
+    padding-bottom: 0;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: grid;
+    background: none;
+    height: auto;
+    position: unset;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 18px;
+    padding: 0.5em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    padding: 0;
+  }
+  .navbar nav li.current a:active {
+    font-weight: bolder;
+  }
+  section.hero-input {
+    text-align: center;
+    background-color: transparent;
+    opacity: 85%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: none;
+    height: auto; /* padding-top: 5rem; */
+    padding-bottom: 4rem;
+    backdrop-filter: blur(55px);
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+  }
+}
+
+h3.cat-heading {
+  text-align: center;
+  padding: 25px;
+  font-size: 3em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+section.categories-content {
+  background-image: url("{{url_for('static', filename='images/mangga.jpg')}}");
+  color: white;
+}
+
+section.categories-content .cat-list {
+  padding: 2em 1em;
+}
+
+section.categories-content ul {
+  list-style-type: none;
+}
+
+section.categories-content ul li {
+  background: rgb(27, 26, 26);
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 2em;
+}
+
+section.categories-content ul li img {
+  width: 12em;
+  height: 12em;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: -5em;
+}
+
+section.categories-content ul a {
+  color: blue;
+  text-decoration: none;
+}
+
+section.categories-content ul a:hover {
+  color: rgb(12, 177, 206);
+}
+.about {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+section.about h2 {
+  font-size: 3em;
+  font-family: Metal Mania;
+  padding-left: 7em;
+  background-color: #f2f2f2;
+}
+
+section.about .about-div {
+  background: #20272e;
+  padding: 1.2em;
+  padding-left: 7em;
+}
+
+section.about .about-div a {
+  color: var(--primary-color);
+  border: 2px solid;
+  border-color: white;
+  border-radius: 0.7em;
+  text-decoration: none;
+}
+
+section.about .about-div a:hover {
+  font-weight: bold;
+  color: black;
+  background: white;
+}
+
+section.about .about-div div ul.features-list {
+  margin: 0;
+  color: white;
+  padding-left: 0.1em;
+  list-style-type: circle;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+section.about .about-div div ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+
+section.about .about-div div ul.features-list li:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+section.about div.tools-div {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+section.about div.sub-div {
+  background: #20272e;
+  color: white;
+  -webkit-columns: 2;
+  columns: 2;
+  padding: 1em;
+}
+
+section.about div.sub-div ul.tools-list {
+  margin: 0;
+  font-size: 1.1em;
+  margin-left: 3em;
+}
+
+section.about div.sub-div ul.tools-list li {
+  margin-bottom: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+section.about div.sub-div ul.tools-list li:before {
+  content: "";
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("{{url_for('static', filename='images/bullet.sva')}}");
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+section.about footer a {
+  border: 5px solid;
+  border-radius: 1em;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+section.about footer a:hover {
+  color: white;
+  background: var(--primary-color);
+}
+
+div.prediction {
+  display: flex;
+  background-image: url("{{url_for('static', filename='images/mangga.jpg')}}");
+  text-align: center;
+}
+
+div.prediction h1 {
+  font-size: 2.2em;
+  font-family: "Booter - Zero Zero";
+}
+
+div.prediction .predicted-class h2 {
+  font-size: 0.6em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div.prediction .retry {
+  font-size: 1.3em;
+  font-family: "Booter - Zero Zero";
+  padding: 1em;
+  text-align: center;
+}
+
+div.prediction .retry a {
+  text-decoration: none;
+  background: var(--primary-color);
+  padding: 10px;
+  width: 50%;
+  border-radius: 10px;
+  color: black;
+}
+
+div.prediction .retry a:hover {
+  color: white;
+}
+
+div.false-predicted-class h2 {
+  font-size: 2em;
+  font-family: "Booter - Zero Zero";
+  color: #641e16;
+}
+
+.pred {
+  padding-top: 40px;
+  padding-bottom: 300px;
+  background-size: cover;
+  color: white;
+}
+
+.card {
+  color: white;
+  margin-top: 20px;
+  background: transparent;
+  backdrop-filter: blur(55px);
+  opacity: 85%;
+  box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+}
+.card span {
+  color: black;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+  section.about h2 {
+    padding-left: 1em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  section.about .about-div {
+    padding-left: 2em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

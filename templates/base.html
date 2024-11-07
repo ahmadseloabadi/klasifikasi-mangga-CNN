@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a class="nav-heading" href="{{ url_for('home_page') }}"
+          ><span>Mango</span></a
+        >
+        <img
+          id="mobile-cta"
+          class="mobile-menu"
+          src="{{url_for('static', filename='images/menu.svg')}}"
+          alt="Open navigation"
+        />
+        <nav class="nav-menu">
+          <img
+            id="mobile-exit"
+            class="mobile-exit"
+            src="{{ url_for('static', filename='images/exit.svg')}}"
+            alt="Exit navigation"
+          />
+          <ul class="primary-nav">
+            <li><a href="{{ url_for('home_page') }}">Home</a></li>
+            <li><a href="{{ url_for('about_page') }}">Pengujian</a></li>
+            <li><a href="{{ url_for('categories_page') }}">Categories</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- <section class="hero">
+      <div
+        class="container"
+        style="background-image: url({{url_for('static', filename='images/corn1.jpg')}})"
+      >
+        <p class="subheading">Multi-label Image Classifier</p>
+        <h1 class="main-heading">Corn Leaf Disease Classification App</h1>
+      </div>
+    </section> -->
+
+    {% block content %} {% endblock %}
+
+    <!--  java script for clicking menu-->
+    <!-- to select buttons in js -->
+    <!-- event lister means allowing click on that  -->
+
+    <script>
+      const mobileBtn = document.getElementById("mobile-cta");
+      nav = document.querySelector("nav");
+      mobileBtnExit = document.getElementById("mobile-exit");
+
+      mobileBtn.addEventListener("click", () => {
+        nav.classList.add("menu-btn");
+      });
+
+      mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+    </script>
+  </body>
+</html>

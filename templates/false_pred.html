@@ -1,0 +1,31 @@
+<!--extend base file-->
+{% extends 'base.html' %}
+
+<!--title section-->
+{% block title %}
+ Prediction
+{% endblock %}
+
+<!-- content section-->
+{% block content %}
+
+ <!--  prediction content here -->
+ 
+    <div class="prediction">
+        <h1>Predicted Results</h1>
+        <div class="false-predicted-class" style="color:#641E16">
+         <h2>Cropnet Model Is Not Sure About This Image</h2>
+         <h2>Please Select Image Of Cassava
+          Leaf And Try Again</h2>
+        </div>
+        <h2 class="retry"><a href="{{home_page}}">Try Again</a></h2>
+    </div>
+
+    <footer>
+        <div>
+           <p>To know more about this project go to About-Page</p>
+            <a class="footer-about" href="{{url_for('about_page')}}">About</a>
+        </div>
+    </footer>
+   
+{% endblock %}

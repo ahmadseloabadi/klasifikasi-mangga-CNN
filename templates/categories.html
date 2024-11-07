@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'main.css')}} "
+    />
+  </head>
+  <body>
+    <!--extend base file-->
+    {% extends 'base.html' %}
+
+    <!--title section-->
+    {% block title %} Categories {% endblock %}
+
+    <!-- content section-->
+    {% block content %}
+    <!--  categories section -->
+
+    <section
+      class="features mt-70"
+      style="  background-image: url({{url_for('static', filename='images/mangga.jpg')}}); background-size: cover;
+    "
+    >
+      <div class="container-fluid categories">
+        <h3 class="cat-heading text-white">Mango Categories</h3>
+        <div class="row features-wrapper">
+          <div class="col-lg-6 d-flex flex-column justify-content-between">
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Anwar Ratool.jpg')}}"
+                    alt=""
+                    class="rounded"
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Anwar Ratool</h3>
+                  <p class="primary-copy mb-30">
+                    Anwar Ratol (terkadang dieja Anwar Rataul ) adalah varietas
+                    mangga kecil berwarna kuning yang terkenal karena rasa manis
+                    dan tidak berserat. Kadang-kadang disebut 'pembangkit tenaga
+                    listrik mini'. Hal ini dibudidayakan di wilayah Punjab dan
+                    Sindh di Pakistan , dan dekat desa Rataul di Uttar Pradesh ,
+                    India . Rasanya sangat manis dengan sedikit serat.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Anwar_Ratol"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Chaunsa(Black).jpg')}}"
+                    alt=""
+                    class="rounded"
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Chaunsa(Black)</h3>
+                  <p class="primary-copy mb-30">
+                    Mangga ini awalnya dibudidayakan di Rahim Yar Khan dan
+                    Multan, namun menurut legenda, mangga ini diberi nama saat
+                    ini oleh Sher Shah Suri setelah ia mengalahkan Kaisar Mughal
+                    Humayun di Chausa, sebuah distrik di Bihar, India. Mangga
+                    ini merupakan favorit pendiri Kerajaan Suri.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.zameen.com/blog/types-mangoes-specialties.html"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Chaunsa(Summer Bashist).jpg')}}"
+                    alt=""
+                    class="rounded"
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Amanita Bisporigera</h3>
+                  <p class="primary-copy mb-30">
+                    AMangga ini awalnya dibudidayakan di Rahim Yar Khan dan
+                    Multan, namun menurut legenda, mangga ini diberi nama saat
+                    ini oleh Sher Shah Suri setelah ia mengalahkan Kaisar Mughal
+                    Humayun di Chausa, sebuah distrik di Bihar, India. Mangga
+                    ini merupakan favorit pendiri Kerajaan Suri.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.zameen.com/blog/types-mangoes-specialties.html"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Chaunsa(White).jpg')}}"
+                    alt=""
+                    class="rounded"
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Chaunsa(White)</h3>
+                  <p class="primary-copy mb-30">
+                    AMangga ini awalnya dibudidayakan di Rahim Yar Khan dan
+                    Multan, namun menurut legenda, mangga ini diberi nama saat
+                    ini oleh Sher Shah Suri setelah ia mengalahkan Kaisar Mughal
+                    Humayun di Chausa, sebuah distrik di Bihar, India. Mangga
+                    ini merupakan favorit pendiri Kerajaan Suri.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.zameen.com/blog/types-mangoes-specialties.html"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-grid gap-3">
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Dosehri.jpg')}}"
+                    alt=""
+                    class="rounded"
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Dosehri</h3>
+                  <p class="primary-copy mb-30">
+                    Dussehri menelusuri akarnya kembali ke taman Nawab Lucknow
+                    pada abad ke-18. Menggiurkan dan menggugah selera, mangga
+                    memiliki daging buah yang paling juicy dengan rasa yang
+                    nikmat dan aroma yang nikmat.Berukuran lebih kecil dari
+                    mangga lainnya, rasanya tidak kalah nikmat dengan jus
+                    manisnya, membuat Anda menginginkan lebih bahkan setelah
+                    makan 2 atau 3 buah sekaligus. Waktu terbaik untuk menikmati
+                    mangga ini adalah pada puncak rasanya selama dua minggu
+                    pertama bulan Juli.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.zameen.com/blog/types-mangoes-specialties.html"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Fajri.jpg')}}"
+                    alt=""
+                    class="rounded"
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Fajri</h3>
+                  <p class="primary-copy mb-30">
+                    Mangga jenis ini cukup langka karena jenisnya yang unik,
+                    rasanya yang manis, dan teksturnya yang sangat langka. Kulit
+                    buahnya pucat, daging buahnya tidak berserat.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.geo.tv/latest/290682-all-hail-mangoes-heres-what-you-need-to-know-about-king-of-fruits"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Langra.jpg')}}"
+                    class="rounded"
+                    alt=""
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Langra</h3>
+                  <p class="primary-copy">
+                    Varietas mangga ini kemungkinan besar pertama kali
+                    dibudidayakan di Varanasi, yang juga dikenal sebagai
+                    Banaras, di bagian utara India. Tidak ada yang mengetahui
+                    mengapa mangga tersebut kemudian dikenal sebagai Langra atau
+                    'lumpuh', namun banyak cerita lokal menyatakan bahwa pemilik
+                    pohon tersebut adalah dirinya sendiri yang timpang,
+                    sehingga, keadaan inilah yang memberi nama pada mangga
+                    tersebut.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.zameen.com/blog/types-mangoes-specialties.html"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-30">
+              <div class="small-feature-card">
+                <div class="icon">
+                  <img
+                    src="{{url_for('static', filename='images/Sindri.jpg')}}"
+                    class="rounded"
+                    alt=""
+                  />
+                </div>
+                <div class="copy">
+                  <h3 class="small-header p-0">Sindri</h3>
+                  <p class="primary-copy">
+                    Sindhri adalah varietas mangga unggulan dari Sindh yang
+                    berasal dari kota dengan nama yang sama di Distrik Mirpur
+                    Khas. Mangga ini berukuran besar, berbentuk lonjong dengan
+                    kulit kekuningan, rendah serat, dan sangat aromatik. Bagi
+                    banyak orang, mangga Sindhri adalah lambang rasa dan tekstur
+                    mangga. Meskipun umumnya manis, mangga Sindhri mungkin
+                    terasa sedikit tajam di awal musim.
+                  </p>
+                  <p>To know more about this disease visit</p>
+                  <a
+                    href="https://www.zameen.com/blog/types-mangoes-specialties.html"
+                    target="_blank"
+                    class="text-button"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
